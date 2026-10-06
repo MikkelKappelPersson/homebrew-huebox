@@ -3,8 +3,8 @@ class Huebox < Formula
 
   desc "Terminal theme editor with live preview"
   homepage "https://github.com/MikkelKappelPersson/huebox"
-  url "https://files.pythonhosted.org/packages/source/h/huebox/huebox-0.3.1.tar.gz"
-  sha256 "18b2ff92a014db2d3fdbd2516f4a1b1e70f5b64f9efb42745ae725881ff1a558"
+  url "https://files.pythonhosted.org/packages/source/h/huebox/huebox-0.3.2.tar.gz"
+  sha256 "0560bf0b67c314e82774bc134cb3c42a008c129ec56d80a24cda39d58492c05e"
   license "MIT"
 
   depends_on "python@3.14"
