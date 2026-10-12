@@ -1,14 +1,32 @@
 class Huebox < Formula
   desc "Terminal theme editor with live preview"
   homepage "https://github.com/MikkelKappelPersson/huebox"
-  url "https://github.com/MikkelKappelPersson/huebox/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "87fb37b4936fa844db24eecd6b246b4cdbc32c8180f14ad00c344c2f1f562fac"
+  version "0.5.1"
   license "MIT"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-arm64-macos.tar.gz"
+      sha256 "dab5b1b4facc3e4716db1b530d1d46ff64cd5aa4d56cc468c8815cebeafb1651"
+    end
+    on_intel do
+      url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-x86_64-macos.tar.gz"
+      sha256 "ff97565c42468ad9ccd930a9ba242ff3240cd2158490b8b65c042746164ff9a1"
+    end
+  end
+  on_linux do
+    on_arm do
+      url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-aarch64-linux.tar.gz"
+      sha256 "125e67fda1b3f7d598756ed9930d781d30034031e226b36134f265dba842654b"
+    end
+    on_intel do
+      url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-x86_64-linux.tar.gz"
+      sha256 "29a1a0b20b80b1723b7ee71f446afe8cd591060e908ba9fdd80b1593408b33ea"
+    end
+  end
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "rust"
+    bin.install "huebox"
   end
 
   livecheck do
