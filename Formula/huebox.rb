@@ -1,27 +1,27 @@
 class Huebox < Formula
   desc "Terminal theme editor with live preview"
   homepage "https://github.com/MikkelKappelPersson/huebox"
-  version "0.5.3"
+  version "0.5.4"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-arm64-macos.tar.gz"
-      sha256 "c267a6a88558ebac88ce22b6c868b5a555bd4ce68ab105f741c730db47a12939"
+      sha256 "daf864c73323c409e2c09ac8e3adbc951eeec35efedcabc7f346345d5ed5f86b"
     end
     on_intel do
       url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-x86_64-macos.tar.gz"
-      sha256 "8cee555e455b8db2b574ca206bb91693458eb1603ce22bbb3c6ef8fddb7f7e6f"
+      sha256 "6cc39e26ded60559cbb1f450eb89c394d657aa4c9f420400012373c8b06d1bee"
     end
   end
   on_linux do
     on_arm do
       url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-aarch64-linux.tar.gz"
-      sha256 "3401217e94ba642fb3f925cc874d45b16a5991fed6f4d3ff0eb288ebeb3fe597"
+      sha256 "b52a690ee61c0025454c32fa1201fd8c2824e38808469a7830132f8c995d065e"
     end
     on_intel do
       url "https://github.com/MikkelKappelPersson/huebox/releases/download/v#{version}/huebox-#{version}-x86_64-linux.tar.gz"
-      sha256 "086e4e0b5249f63db38566f8ce76f619a14da9b4136f993ce86cec8f62834a62"
+      sha256 "8c492a08ae4ea7eb4857408c4f8b39f2823f2f12fe500a7122c60693e47e614f"
     end
   end
 
